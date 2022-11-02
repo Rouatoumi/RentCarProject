@@ -1,0 +1,89 @@
+{% extends 'layout/master.html.twig' %}
+{% block content %}
+
+	<div class="home">
+
+
+		<div>
+			<div
+				class="fullwidth-template">
+
+
+				{#} OUR CARSSSSSSSSSSS {#}
+
+				<div class="tanajil-tabs  default rows-space-40">
+
+
+					<div class="container">
+
+						<div class="tab-container">
+							<div id="bestseller" class="tab-panel active">
+								<div class="tanajil-product">
+									<ul class="row list-products auto-clear equal-container product-grid">
+										<li class="product-item  col-lg-3 col-md-4 col-sm-6 col-xs-6 col-ts-12 style-1">
+											<div class="product-inner equal-element">
+
+												<div class="product-thumb">
+													<div class="thumb-inner">
+														<a href="{{ path('app_car_index') }}">
+															<img src="assets/images/carrent.jpg" alt="img">
+														</a>
+
+													</div>
+												</div>
+												<div class="product-info">
+													<h5 class="product-name product_title">
+														<a href="{{ path('app_car_index') }}">Number of Cars :
+															{{nb_cars}}
+														</a>
+													</h5>
+													<div class="group-info">
+
+														<div
+															class="price">
+															{#}	<del>
+																																																																																																																																																																																																																																																																																																																																																																																																												$65
+																																																																																																																																																																																																																																																																																																																																																																																																											</del> {#}
+															<ins></ins>
+														</div>
+													</div>
+												</div>
+											</div>
+										</li>
+										<li class="product-item product-type-variable col-lg-3 col-md-4 col-sm-6 col-xs-6 col-ts-12 style-1">
+											<div class="product-inner equal-element">
+												<div class="product-top"></div>
+												<div class="product-thumb">
+													<div class="thumb-inner">
+														<a href="{{ path('app_infos_index') }}">
+															<img src="assets/images/rent.jpg" alt="img">
+														</a>
+
+													</div>
+												</div>
+												<div class="product-info">
+													<h5 class="product-name product_title">
+														<a href="{{ path('app_infos_index') }}">number of booking :
+															{{nb_contact}}</a>
+													</h5>
+
+												</div>
+											</div>
+										</li>
+
+
+									</ul>
+								</div>
+							</div>
+						</div>
+					</div>
+
+				</div>
+
+			</div>
+		</div>
+
+
+	</div>
+
+{% endblock %}

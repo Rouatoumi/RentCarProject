@@ -1,0 +1,55 @@
+{#}{% extends 'layout/master.html.twig' %}
+
+{% block title %}New Car
+{% endblock %}
+
+
+{% block content %}
+	<h1>New Car
+	</h1>
+
+	{{ include('car/_form.html.twig') }}
+
+
+	<button class="btn" type="submit">
+
+		<a href="{{ path('app_car_index') }}" class="text-white">back to list</a>
+
+	</button>
+
+{% endblock %} {#}
+{% extends 'layout/master.html.twig' %}
+
+{% block title %}New Car
+{% endblock %}
+{% block content %}
+	<center>
+		<h3 class="custom_blog_title">
+			Add new Car
+		</h3>
+	</center>
+
+	{{ include('car/_form.html.twig') }}
+	<div class="main-content main-content-checkout container">
+		<button class="btn-back-to-shipping  ">
+			<a href="{{ path('app_car_index') }}">back to list</a>
+		</button>
+	</div>
+
+
+{% endblock %}
+
+{#}
+{% block content %}
+	<h1>Add New Car</h1>
+
+	{{ include('car/_form.html.twig') }}
+	<div class="card-footer">
+		<button type="submit" class="btn btn-primary">
+			<a href="{{ path('app_car_index') }}" class="text-white">back to list</a>
+
+
+		</button>
+	</div>
+{% endblock %} 
+{#}

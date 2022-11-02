@@ -1,0 +1,70 @@
+<form method="post">
+
+	<div class="main-content main-content-checkout">
+		<div class="container">
+
+
+			<div class="checkout-wrapp">
+				<div class="shipping-address-form-wrapp">
+					<div class="shipping-address-form  checkout-form">
+						<div class="row-col-1 row-col">
+							<div class="shipping-address">
+
+								{{ form_start(form) }}
+								<p class="form-row form-row-first">
+									<label class="text input-text">{{  form_row(form.Fist_name ) }}</label>
+
+								</p>
+							</div>
+
+						</p>
+						<p class="form-row form-row-last">
+							<label class="text input-text">{{  form_row(form.Last_name ) }}</label>
+
+						</p>
+
+						<p class="form-row form-row-first">
+							<label class="text input-text">{{  form_row(form.CIN ) }}</label>
+
+						</p>
+						<p class="form-row form-row-first">
+							<label class="text input-text">
+								{{  form_row(form.Phone) }}</label>
+
+						</p>
+						<p class="form-row form-row-first">
+							<label class="text input-text">
+								{{  form_row(form.Pick_Up) }}
+							</label>
+						</p>
+						<p class="form-row form-row-first">
+							<label class="text input-text">{{  form_row(form.Return_back) }}</label>
+
+						</p>
+						<p class="form-row form-row-first">
+							<label class="text input-text">
+								{{  form_row(form.Note ) }}</label>
+
+						</p>
+						<p class="form-row form-row-last">
+							<label class="text input-text">
+								{{  form_row(form.CarName ) }}
+							</label>
+
+						</p>
+					</div>
+				</div>
+
+			</div>
+			<button class=" button-payment" type="submit">
+				<a href="{{ path('app_car_index') }}">
+					Save
+				</a>
+			</button>
+
+		</div>
+		{{ form_end(form) }}
+
+	</div>
+
+</div></div></form>

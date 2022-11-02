@@ -1,0 +1,114 @@
+{% extends 'layout/master.html.twig' %}
+{% block content %}
+	<div class="home">
+
+
+		<div>
+			<div
+				class="fullwidth-template">
+
+
+				{#} OUR CARSSSSSSSSSSS {#}
+				<div class="tanajil-tabs  default rows-space-40">
+					<div class="container">
+						<div class="tab-container">
+							<div id="bestseller" class="tab-panel active">
+								<div class="tanajil-product">
+									<ul class="row list-products auto-clear equal-container product-grid">
+										{% for car in cars %}
+
+											<li class="product-item  col-lg-3 col-md-4 col-sm-6 col-xs-6 col-ts-12 style-1">
+												<div class="product-inner equal-element">
+													{% if is_granted('ROLE_ADMIN') %}
+														<div class="product-top">
+															<div class="flash">
+																<span class="onnew">
+																	<span class="text">
+
+																		{{ car.id }}
+																		<br>
+																		new
+																	</span>
+																</span>
+															</div>
+														</div>
+													{% endif %}
+
+													<div class="product-thumb">
+														<div class="thumb-inner">
+
+															<a
+																href="{{ path('app_car_show', {'id': car.id}) }}">
+
+																{#}<img src="assets/images/car1.png" alt="img"> {#}
+
+																<img src="{{ asset('/uploads/brochures/' ~ car.image) }}" alt="img" class="cover-image">
+
+															</a>
+															{#}<div class="thumb-group">
+																																																																																																																																																																																																																																																																																																																																											<div class="yith-wcwl-add-to-wishlist">
+																																																																																																																																																																																																																																																																																																																																												<div class="yith-wcwl-add-button">
+																																																																																																																																																																																																																																																																																																																																													<a href="#">Add to Wishlist</a>
+																																																																																																																																																																																																																																																																																																																																												</div>
+																																																																																																																																																																																																																																																																																																																																											</div> 
+																																																																																																																																																																																																																																																																																																																																											<a href="#" class="button quick-wiew-button">Quick View</a>
+																																																																																																																																																																																																																																																																																																																																											<div class="loop-form-add-to-cart">
+																																																																																																																																																																																																																																																																																																																																												<button class="single_add_to_cart_button button">Add to cart
+																																																																																																																																																																																																																																																																																																																																												</button>
+																																																																																																																																																																																																																																																																																																																																											</div>
+																																																																																																																																																																																																																																																																																																																																										</div>{#}
+														</div>
+													</div>
+													<div class="product-info">
+														<h5 class="product-name product_title">
+															<a href="{{ path('app_car_show', {'id': car.id}) }}">
+
+																{{ car.Name  }}
+
+																<br>
+																Model :
+																{{ car.Brand }}
+
+
+															</a>
+														</h5>
+
+														<div class="group-info">
+
+															<div
+																class="price">
+																{#}	<del>
+																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																										$65
+																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																									</del> {#}
+																<ins>
+																	Price/day :
+																	{{ car.Price }}
+																	DT
+																</ins>
+															</div>
+
+															<div class="group-info">
+																<div class="text">
+																	{{ car.Decription }}
+																</div>
+
+
+															</div>
+														</div>
+													</div>
+												</div>
+											</li>
+
+
+										{% endfor %}
+									</div>
+								</div>
+
+							</div>
+						</div>
+
+
+					</div>
+
+
+				{% endblock %}

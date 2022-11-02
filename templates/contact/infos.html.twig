@@ -1,0 +1,59 @@
+{% extends 'layout/master.html.twig' %}
+
+{% block title %}Contact index
+{% endblock %}
+
+{% block content %}
+	<h1>All Reservations</h1>
+
+	<table class="table">
+		<thead>
+			<tr>
+				<th>Id</th>
+				<th>Fist_name</th>
+				<th>Last_name</th>
+				<th>CIN</th>
+				<th>Phone</th>
+				<th>Pick_Up</th>
+				<th>Return_back</th>
+				<th>Note</th>
+				<th>Your Car
+				</th>
+				<th>actions</th>
+			</tr>
+		</thead>
+		<tbody>
+			{% for contact in contacts %}
+				<tr>
+					<td>{{ contact.id }}</td>
+					<td>{{ contact.FistName }}</td>
+					<td>{{ contact.LastName }}</td>
+					<td>{{ contact.CIN }}</td>
+					<td>{{ contact.Phone }}</td>
+					<td>{{ contact.PickUp ? contact.PickUp|date('Y-m-d') : '' }}</td>
+					<td>{{ contact.ReturnBack ? contact.ReturnBack|date('Y-m-d') : '' }}</td>
+					<td>{{ contact.Note }}</td>
+					<td>{{ contact.CarName }}</td>
+
+
+					<td>
+						<button>
+							<a href="{{ path('app_contact_show', {'id': contact.id}) }}">show</a>
+
+						</button>
+						{#}	<button>
+													<a href="{{ path('app_contact_edit', {'id': contact.id}) }}">edit</a>
+						
+												</button> 
+												{#}
+					</td>
+				</tr>
+			</tbody>
+
+		</tbody>
+	</tr>
+{% else %}
+	<tr>
+		<td colspan="9">no records found</td>
+	</tr>
+{% endfor %}</tbody></table>{#}<button><a href="{{ path('app_contact_new') }}">Create new</a></button>{#}{% endblock %}

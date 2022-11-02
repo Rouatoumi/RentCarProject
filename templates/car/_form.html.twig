@@ -1,0 +1,88 @@
+{{ form_start(form) }}
+{{ form_widget(form) }}
+<button class="btn">{{ button_label|default('Save') }}</button>
+{{ form_end(form) }}
+
+{#}<form method="post">
+
+	{{ form_start(form) }}
+	<div class="main-content main-content-checkout">
+		<div class="container">
+
+
+			<div class="checkout-wrapp">
+				<div class="shipping-address-form-wrapp">
+					<div class="shipping-address-form  checkout-form">
+						<div class="row-col-1 row-col">
+							<div class="shipping-address">
+
+								<p class="form-row form-row-first">
+									{{ form_row(form.Brand) }}
+
+								</p>
+								<p class="form-row form-row-last">
+									{{ form_row(form.Name) }}
+
+								</p>
+								<p class="form-row form-row-first">
+									{{ form_row(form.Decription) }}
+								</p>
+								<p class="form-row form-row-last">
+									{{ form_row(form.Price) }}
+								</p>
+								<p class="form-row form-row-first">
+									<label class="form-label" for="customFile">Default file input example</label>
+									{{ form_row(form.image) }}
+
+								</p>
+
+							</div>
+						</div>
+						<button type="submit" class="btn btn-primary">{{ button_label|default('Save') }}</button>
+						{{ form_end(form) }}
+					</div>
+
+
+				</div>
+
+
+			</div>
+		</div>
+	</div>
+</form> 
+{#}
+
+{#} {{ form_row(form.Brand) }}
+	{{ form_row(form.Name) }}
+	{{ form_row(form.Decription) }}
+	{{ form_row(form.Price) }}
+
+	{{ form_row(form.image) }}
+
+
+	<button type="submit" class="btn btn-primary">{{ button_label|default('Save') }}</button>
+	{{ form_end(form) }} {#}
+
+{#}<form action="{{path('app_car_new')}}" method="post">
+	<div class="card-body">
+		<div class="form-group">
+			<label for="exampleInputtitre">Titre</label>
+			<input type="text" name="titre" class="form-control" id="exampleInputtitre" placeholder="Enter titre">
+		</div>
+		<div class="form-group">
+			<label for="exampleInputdescription">Description
+			</label>
+			<textarea name="description" class="form-control" id="" cols="30" rows="10"></textarea>
+		</div>
+		<div class="form-group">
+			<label for="exampleInputtelephone">Prix
+			</label>
+			<input type="number" class="form-control" name="prix" id="">
+		</div>
+	</div>
+	<!-- /.card-body -->
+
+	<div class="card-footer">
+		<button type="submit" class="btn btn-primary">Submit</button>
+	</div>
+</form> {#}

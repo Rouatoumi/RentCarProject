@@ -1,0 +1,21 @@
+{% extends 'layout/master.html.twig' %}
+
+{% block title %}New Contact
+{% endblock %}
+
+{% block content %}
+	<center>
+		<h3 class="custom_blog_title">
+			Start your order
+		</h3>
+	</center>
+
+	{{ include('contact/_form.html.twig') }}
+	<div class="main-content main-content-checkout container">
+		<button class="btn-back-to-shipping  ">
+			<a href="{{ path('app_car_index') }}">back to list</a>
+		</button>
+	</div>
+
+
+{% endblock %}

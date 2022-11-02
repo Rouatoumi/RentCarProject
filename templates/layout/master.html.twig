@@ -1,0 +1,20 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+
+
+	<!-- Navbar -->
+	{% include('layout/header.html.twig') %}
+	<!-- /.navbar -->
+
+
+	<!-- Content Wrapper. Contains page content -->
+		<div class="home"> >
+		{% block content  %}{% endblock %}
+		<!-- /.content -->
+	</div>
+
+
+	<!-- Footer -->
+	{% include('layout/footer.html.twig') %}
+{% endblock %}

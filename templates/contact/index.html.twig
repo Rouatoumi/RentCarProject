@@ -1,0 +1,135 @@
+{% extends 'layout/master.html.twig' %}
+
+{% block title %}Your order
+{% endblock %}
+
+{% block content %}
+	<table class="center">
+		<tr>
+			<td>
+				<center class="post-info">
+					<h3 class="post-title ">
+						Your reservation is done
+						<br>
+						We will contact you soon
+					</center>
+				</td>
+			</td>
+		</tr>
+		<tr>
+			<td>
+				<center>
+					<button class="btn-back-to-shipping ">
+						<a href="{{ path('app_car_index') }}">back to home</a>
+
+					</button>
+				</center>
+			</td>
+		</tr>
+	</table>
+{% endblock %}
+{#}
+	<div class="content-area content-blog col-lg-9 col-md-8 col-sm-12 col-xs-12">
+		<div class="site-main">
+
+			<div class="blog-list list-style">
+				<div class="blog-item">
+					<div class="post-format"></div>
+					<div class="post-info">
+						
+						<center>
+							<h3 class="post-title">
+								<a href="#">Your reservation is done
+									<br>
+									We will contact you soon
+								</span>
+							</a>
+						</h3>
+					</center>
+
+
+				</div>
+
+			</div>
+		</div>
+		<center>
+			<button class="btn-back-to-shipping ">
+				<a href="{{ path('app_car_index') }}">back to list</a>
+
+			</button>
+		</center>
+
+
+
+  {#}
+
+{#}    
+															<h1>Contact</h1>
+															
+																<table class="table">
+																	<tbody>
+																		<tr>
+																			<th>Id</th>
+																			
+															<td>{{ contact.id }}</td>
+															
+																		</tr>
+																		<tr>
+																			<th>Fist_name</th>
+																			<td>{{ contact.FistName }}</td>
+																		</tr>
+																		<tr>
+																			<th>Last_name</th>
+																			<td>{{ contact.LastName }}</td>
+																		</tr>
+																		<tr>
+																			<th>CIN</th>
+																			<td>{{ contact.CIN }}</td>
+																		</tr>
+																		<tr>
+																			<th>Phone</th>
+																			<td>{{ contact.Phone }}</td>
+																		</tr>
+																		<tr>
+																			<th>Pick_Up</th>
+																			<td>{{ contact.PickUp ? contact.PickUp|date('Y-m-d') : '' }}</td>
+																		</tr>
+																		<tr>
+																			<th>Return_back</th>
+																			<td>{{ contact.ReturnBack ? contact.ReturnBack|date('Y-m-d') : '' }}</td>
+																		</tr>
+																		<tr>
+																			<th>Note</th>
+																			<td>{{ contact.Note }}</td>
+																		</tr>
+																		<tr>
+																			<th>Your car</th>
+																			<td>{{ contact.CarName }}</td>
+																		</tr>
+																	</tbody>
+																	<tfooter>
+																		<tr>
+																			<td>
+																				<button class="btn-back-to-shipping">
+																					<a href="{{ path('app_contact_index') }}">back to list</a>
+															
+																				</button>
+																			</td>
+															
+																			<td>
+																				<button class="button-payment">
+																					<a href="{{ path('app_contact_edit', {'id': contact.id}) }}">edit</a>
+															
+																				</button>
+																			</td>
+															
+																		</tr>
+																	</tfooter>
+																</table>
+																<tr>
+																	<td class="btn-back-to-shipping">
+																		{{ include('contact/_delete_form.html.twig') }}
+															
+																	</td>
+																</tr>
+															{#}
